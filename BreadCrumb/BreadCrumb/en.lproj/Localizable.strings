@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  BreadCrumb
+
+  Created by Hui Jiang on 29/10/13.
+
+*/
+
+// iRate
+"iRateMessageTitle" = "Do you like Bugle?";
+"iRateAppMessage" = "If you're enjoying this free service, please take a second to give us five stars on the App Store. This will help us tremendously to reach more people and to continue improving the app. \n\nSomething bugging you? Please email us and we'll do our best to improve it. \n\nThanks so much for using Bugle!";
+"iRateGameMessage" = "";
+"iRateCancelButton" = "";
+"iRateRateButton" = "Rate it Now";
+"iRateRemindButton" = "Maybe Later";
