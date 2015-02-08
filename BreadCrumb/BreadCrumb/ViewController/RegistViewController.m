@@ -503,16 +503,18 @@
 
 // This method will be called when the user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
-                            user:(id<FBGraphUser>)user
-{
+                            user:(id<FBGraphUser>)user {
   
-    NSLog(@"user profile %@", user);
-    NSLog(@"user profile id %@", user.objectID);
-    NSLog(@"Access Token %@", [[FBSession.activeSession accessTokenData] accessToken]);
+  NSLog(@"user profile %@", user);
+  NSLog(@"user profile id %@", user.objectID);
+  NSLog(@"Access Token %@", [[FBSession.activeSession accessTokenData] accessToken]);
 
-    [self.view makeToast:[NSString stringWithFormat:@"get back from Facebook, userID: %@, access token:%@", user.objectID, [[FBSession.activeSession accessTokenData] accessToken] ] duration:5.0f position:nil];
-  
-    [_userModel signInWithFacebookLogin:user.objectID accessToken:[[FBSession.activeSession accessTokenData] accessToken]];
+  [Keychain saveString:user.objectID forKey:@"FBProfileID"];
+  [Keychain saveString:[[FBSession.activeSession accessTokenData] accessToken] forKey:@"FBAccessToken"];
+
+  [self.view makeToast:[NSString stringWithFormat:@"get back from Facebook, userID: %@, access token:%@", user.objectID, [[FBSession.activeSession accessTokenData] accessToken] ] duration:5.0f position:nil];
+
+  [_userModel signInWithFacebookLogin:user.objectID accessToken:[[FBSession.activeSession accessTokenData] accessToken]];
 }
 
 @end

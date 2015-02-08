@@ -106,7 +106,6 @@
 		32DDECDF14BDE34D00ECC89E /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DDECDE14BDE34D00ECC89E /* RegistViewController.m */; };
 		32E354DF14C1636F009CC475 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E354DD14C1636F009CC475 /* check.png */; };
 		32E354E014C1636F009CC475 /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E354DE14C1636F009CC475 /* uncheck.png */; };
-		32E46E0717252AB600F36226 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E46E0617252AB600F36226 /* Default-568h@2x.png */; };
 		32E46E2E17252F4E00F36226 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E46E0817252F4E00F36226 /* AboutViewController.xib */; };
 		32E46E2F17252F4E00F36226 /* BreadcrumbContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E46E0A17252F4E00F36226 /* BreadcrumbContactViewController.xib */; };
 		32E46E3317252F4E00F36226 /* CrumbDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E46E1217252F4E00F36226 /* CrumbDetailViewController.xib */; };
@@ -154,6 +153,7 @@
 		CEA4903919834A3C00B53D9E /* libFlurry_5.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA4903819834A3C00B53D9E /* libFlurry_5.0.0.a */; };
 		CEA4903C1983AF7700B53D9E /* ContactListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA4903A1983AF7700B53D9E /* ContactListViewController.xib */; };
 		D23988871966446300597508 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D23988861966446300597508 /* FacebookSDK.framework */; };
+		D24E80081A8781920033E5B6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D24E80071A8781920033E5B6 /* Default-568h@2x.png */; };
 		D2627945198FE12100F36FA5 /* Icon_Tab_Bar_New_Crumb_iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = D2627943198FE12100F36FA5 /* Icon_Tab_Bar_New_Crumb_iOS7.png */; };
 		D2627946198FE12100F36FA5 /* Icon_Tab_Bar_New_Crumb_iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2627944198FE12100F36FA5 /* Icon_Tab_Bar_New_Crumb_iOS7@2x.png */; };
 		D26B522619854AD10089C2FB /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D26B522219854AD10089C2FB /* Icon-60@2x.png */; };
@@ -318,7 +318,6 @@
 		32DDECDE14BDE34D00ECC89E /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		32E354DD14C1636F009CC475 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		32E354DE14C1636F009CC475 /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uncheck.png; sourceTree = "<group>"; };
-		32E46E0617252AB600F36226 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		32E46E0917252F4E00F36226 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AboutViewController.xib; sourceTree = "<group>"; };
 		32E46E0B17252F4E00F36226 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BreadcrumbContactViewController.xib; sourceTree = "<group>"; };
 		32E46E1317252F4E00F36226 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CrumbDetailViewController.xib; sourceTree = "<group>"; };
@@ -394,6 +393,7 @@
 		CEA4903B1983AF7700B53D9E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ContactListViewController.xib; sourceTree = "<group>"; };
 		D2253B17195423D3001E6FA6 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		D23988861966446300597508 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		D24E80071A8781920033E5B6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D2627943198FE12100F36FA5 /* Icon_Tab_Bar_New_Crumb_iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Tab_Bar_New_Crumb_iOS7.png; sourceTree = "<group>"; };
 		D2627944198FE12100F36FA5 /* Icon_Tab_Bar_New_Crumb_iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Tab_Bar_New_Crumb_iOS7@2x.png"; sourceTree = "<group>"; };
 		D26B522219854AD10089C2FB /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -606,6 +606,7 @@
 		1899147F14BD18EE007465DE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D24E80071A8781920033E5B6 /* Default-568h@2x.png */,
 				D2627943198FE12100F36FA5 /* Icon_Tab_Bar_New_Crumb_iOS7.png */,
 				D2627944198FE12100F36FA5 /* Icon_Tab_Bar_New_Crumb_iOS7@2x.png */,
 				326C1BA81792EAE000FE4B6F /* deleteButton.png */,
@@ -678,7 +679,6 @@
 				DF119F8214BDD3E900BA2D56 /* logo@2x.png */,
 				DF119F7C14BDC73D00BA2D56 /* Default.png */,
 				DF119F7D14BDC73D00BA2D56 /* Default@2x.png */,
-				32E46E0617252AB600F36226 /* Default-568h@2x.png */,
 				DF83DB1516D32F48000B5DEA /* collect.png */,
 				DF83DB1616D32F48000B5DEA /* expand.png */,
 			);
@@ -1016,9 +1016,9 @@
 				187CCB2B16675FF600E0A4E9 /* checkInButtonOrange.png in Resources */,
 				187CCB2C16675FF600E0A4E9 /* checkInButtonOrange@2x.png in Resources */,
 				DF83DB1716D32F48000B5DEA /* collect.png in Resources */,
+				D24E80081A8781920033E5B6 /* Default-568h@2x.png in Resources */,
 				D26B522619854AD10089C2FB /* Icon-60@2x.png in Resources */,
 				DF83DB1816D32F48000B5DEA /* expand.png in Resources */,
-				32E46E0717252AB600F36226 /* Default-568h@2x.png in Resources */,
 				32E46E2E17252F4E00F36226 /* AboutViewController.xib in Resources */,
 				32E46E2F17252F4E00F36226 /* BreadcrumbContactViewController.xib in Resources */,
 				D2D3CD9A1A18D68800A21AAE /* CrumbListViewController.xib in Resources */,

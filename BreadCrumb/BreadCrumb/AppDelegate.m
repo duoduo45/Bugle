@@ -324,9 +324,20 @@ static void handleRootException( NSException* exception )
 }
 
 - (void)reSignIn {
+  
+  if ([[Keychain getStringForKey:@"FacebookLogin"] isEqualToString:@"YES"]) {
+    
+    NSString *fbProfileID = [Keychain getStringForKey:@"FBProfileID"];
+    NSString *fbAccessToken = [Keychain getStringForKey:@"FBAccessToken"];
+    
+    [_userModel signInWithFacebookLogin:fbProfileID accessToken:fbAccessToken];
+  } else {
+    
     NSString *email = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"] != nil ? [[NSUserDefaults standardUserDefaults] valueForKey:@"UserEmail"] : [Keychain getStringForKey:@"UserEmail"];
     NSString *password = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserPassword"] != nil ? [[NSUserDefaults standardUserDefaults] valueForKey:@"UserPassword"] : [Keychain getStringForKey:@"UserPassword"];
+    
     [_userModel signIn:email password:password];
+  }
 }
 
 #pragma mark

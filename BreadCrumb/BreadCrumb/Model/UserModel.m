@@ -422,33 +422,34 @@ static char base64EncodingTable[64] = {
 
 -(void) successSignInWithFacebookLogin:(ASIHTTPRequest*)request
 {
-	NSString *responseString = [request responseString];
-	NSLog(@"successed sign in:%@",responseString);
-	
-    NSDictionary *results = [responseString JSONValue];
+  NSString *responseString = [request responseString];
+  NSLog(@"successed sign in:%@",responseString);
+  
+  NSDictionary *results = [responseString JSONValue];
     
-	ReturnParam* param = [[ReturnParam alloc] init];
-	
-	if( !IsError(request, results, param) )
-	{
-		param.success = YES;
-		self.userID = SafeCopy([results objectForKey:@"user_id"]);
-		self.accessToken = SafeCopy([results objectForKey:@"access_token"]);
-		self.refreshToken = SafeCopy([results objectForKey:@"refresh_token"]);
+  ReturnParam* param = [[ReturnParam alloc] init];
+  
+  if( !IsError(request, results, param) ) {
+    param.success = YES;
+    self.userID = SafeCopy([results objectForKey:@"user_id"]);
+    self.accessToken = SafeCopy([results objectForKey:@"access_token"]);
+    self.refreshToken = SafeCopy([results objectForKey:@"refresh_token"]);
         
-        [Keychain saveString:self.userID forKey:@"UserID"];
-        [Keychain saveString:self.accessToken forKey:@"AccessToken"];
-        [Keychain saveString:self.refreshToken forKey:@"RefreshToken"];
-        [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"AccessTokenUpdateDate"];
-        [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"RefreshTokenUpdateDate"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-	}
-	
-    [PFPush storeDeviceToken:[AppDelegate getAppDelegate].token];
-    [PFPush subscribeToChannelInBackground:[NSString stringWithFormat:@"user_%@", self.userID] target:self selector:@selector(subscribeFinished:error:)];
+    [Keychain saveString:self.userID forKey:@"UserID"];
+    [Keychain saveString:self.accessToken forKey:@"AccessToken"];
+    [Keychain saveString:self.refreshToken forKey:@"RefreshToken"];
+    [Keychain saveString:@"YES" forKey:@"FacebookLogin"];
     
-    [self callObserver:@selector(userModel:signInWithFacebookLogin:) withObject:self withObject:param];
-	[param release];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"AccessTokenUpdateDate"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"RefreshTokenUpdateDate"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+  }
+  
+  [PFPush storeDeviceToken:[AppDelegate getAppDelegate].token];
+  [PFPush subscribeToChannelInBackground:[NSString stringWithFormat:@"user_%@", self.userID] target:self selector:@selector(subscribeFinished:error:)];
+    
+  [self callObserver:@selector(userModel:signInWithFacebookLogin:) withObject:self withObject:param];
+  [param release];
 }
 
 -(void) failedSignInWithFacebookLogin:(ASIHTTPRequest*)request
